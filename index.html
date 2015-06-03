@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>途游游戏门户，棋牌游戏第一站！</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+
+<style type="text/css">
+body,html,h1,h2,dl,dd,ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+}
+ul li{
+    list-style:none;
+}
+.main {
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    height: 100%;
+    /*background: url(images/bg.jpg) repeat;*/
+}
+img {
+    display: block;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.clear:after {
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+.clear {
+    zoom: 1;
+    clear: both;
+}
+h1 {
+    background: url(images/title_icon.jpg) no-repeat 3px 0;
+    background-size: 23px auto;
+    border-bottom: 1px solid #dedede;
+    padding: 5px 15px 8px 35px;
+    margin: 10px 20px 0;
+    color: #5c5c5c;
+    font-size: 18px;
+}
+dl {
+    position: relative;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ececec));
+    padding: 15px 10px;
+}
+dt,dd {
+    float: left;
+}
+dd {
+    margin: 0 0 0 6px;
+    font-size: 12px;
+}
+h2 {
+    font-size: 16px;
+    margin-top: 8px;
+}
+.level {
+    background: url(images/level.jpg) no-repeat 0 10px;
+    background-size: 16px auto;
+    padding: 8px 12px 8px 8px;
+}
+.size {
+    display: block;
+    color: #8e8e8e;
+    margin-top: 10px;
+}
+p {
+    color: #0bb337;
+    margin: 5px 0 0 0;
+    -webkit-transition: width 0/2s ease-out;
+}
+@media only screen and (max-width: 400px) {p {width: 130px;}}
+button {
+    position: absolute;
+    right: 15px;
+    top: 48px;
+    background: #0bb337;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    padding: 4px 18px;
+}
+.downNum {
+    position: absolute;
+    right: 15px;
+    top: 86px;
+    color: #8e8e8e;
+}
+footer {
+    background: #26356f;
+    font-size: 12px;
+    color: #aac1d3;
+    padding: 15px;
+}
+.banner {
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+    width: 100%;
+}
+.banner ul {
+    width: 400%;
+}
+.banner li {
+    float: left;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <a href="#" id="dizhuBanner"><img src="images/top.jpg" width="100%" height="auto" /></a>
+        <h1>热门游戏列表</h1>
+        <div>
+            <dl class="clear">
+                <dt><img src="images/icon1.jpg" width="82" height="auto" /></dt>
+                <dd>
+                    <h2>途游斗地主（支持单机）</h2>
+                    <span class="level"></span><span class="level"></span><span class="level"></span><span class="level"></span><span class="level"></span>
+                    <span class="size">大小：17.5MB</span>
+                    <p>每日赠送10万元话费，即玩即领！</p>
+
+                    <button type="button" tid="0" id="dizhu">安装</button>
+                    <span class="downNum">2.17亿次下载</span>
+                </dd>
+            </dl>
+
+            <div id="slider" class="banner">
+
+                <ul class="clear">
+                    <li><img src="images/a.jpg" width="100%" /></li>
+                    <li><img src="images/b.jpg" width="100%" /></li>
+                    <li><img src="images/c.jpg" width="100%" /></li>
+                    <li><img src="images/d.jpg" width="100%" /></li>
+                </ul>
+
+                <div class="num" id="pageNav">
+                    <a href="javascript:;" class="point"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </div>
+            </div>
+
+
+        </div>
+        <footer>© 2013 TuYoo Games. All Rights Reserved 在线途游（北京）科技有限公司</footer>
+    </div>
+    <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F15a2ffbed634ac27789b067060e6a470' type='text/javascript'%3E%3C/script%3E"));
+  
+        var ua = navigator.userAgent.match(/iphone|ipad|ipod|mac/i);
+        var button = document.getElementsByTagName('button');
+        var oSlide = document.getElementById('slider');
+        var aLi = oSlide.getElementsByTagName('li');
+        var dataUrl = {'ios': 'http://3g.tuyoo.com/html/baiduLanding/jumpdizhu.html','android': 'android_jump.html'};
+                        //http://apk.dl.tuyoo.com/down/ddz/dizhu_tuyoo_baidusousuo_qm.apk
+                        /*{'ios': 'http://3g.tuyoo.com/html/baiduLanding/jumpmajiang.html','android': 'http://apk.dl.tuyoo.com/down/majiang/Mahjong_baidu_tu_v2.71_r2341.apk'},
+                        {'ios': 'http://3g.tuyoo.com/html/baiduLanding/jumppoke.html','android': 'http://apk.dl.tuyoo.com/down/dezhou/texas_2.1_client_baidu_tu_r1243.apk'}];*/
+
+        // 头部 banner 下载区分 IOS 及 Android 
+        document.getElementsByTagName('a')[0].onclick = function () {
+            if (ua) {
+                window.location.href = 'http://3g.tuyoo.com/html/baiduLanding/jumpdizhu.html';
+            }
+            else {
+                window.location.href = 'http://apk.dl.tuyoo.com/down/ddz/dizhu_tuyoo_baidusousuo_qm.apk';
+            }
+        }
+
+        // 列表下载区分 IOS 及 Android
+
+        button[0].onclick = function () {
+
+            if (ua) {
+                window.location.href = dataUrl.ios;
+            }
+            else {
+                window.location.href = dataUrl.android;
+            }
+        };
+
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onclick = function () {
+                if(ua){
+                    window.location.href = dataUrl.ios;
+                }else{
+                    window.location.href = dataUrl.android;
+                }
+            };
+        }
+
+</script>
+<script src="jquery1.10.2.js"></script>
+<script src="swipe2.js"></script>
+</body>
+</html>
